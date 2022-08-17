@@ -6,7 +6,6 @@ import { Button } from '../Button/Button';
 
 export const ImageGallery = ({
   items,
-  toggleModal,
   setActiveImageURL,
   loadMore,
 }) => {
@@ -18,10 +17,7 @@ export const ImageGallery = ({
             <ImageGalleryItem
               item={item}
               key={item.id}
-              onClick={() => {
-                toggleModal();
-                setActiveImageURL(item.largeImageURL);
-              }}
+
             />
           );
         })}
@@ -38,6 +34,6 @@ ImageGallery.propTypes = {
       largeImageURL: PropTypes.string,
     })
   ),
-  toggleModal: PropTypes.func,
+  setActiveImageURL: PropTypes.func,
   loadMore: PropTypes.func,
 };

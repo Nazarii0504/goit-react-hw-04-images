@@ -9,4 +9,5 @@ export const Button = ({ onClick, children }) => (
 );
 Button.propTypes = {
   onClick: PropTypes.func,
+  children: PropTypes.func,
 };
