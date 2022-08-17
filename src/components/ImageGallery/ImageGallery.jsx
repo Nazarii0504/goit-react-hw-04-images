@@ -4,11 +4,7 @@ import { ImageGalleryList } from './ImageGallery.styled';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 import { Button } from '../Button/Button';
 
-export const ImageGallery = ({
-  items,
-  setActiveImageURL,
-  loadMore,
-}) => {
+export const ImageGallery = ({ items, setActiveImageURL, loadMore }) => {
   return (
     <>
       <ImageGalleryList>
@@ -17,7 +13,9 @@ export const ImageGallery = ({
             <ImageGalleryItem
               item={item}
               key={item.id}
-
+              onClick={() => {
+                setActiveImageURL(item.largeImageURL);
+              }}
             />
           );
         })}
